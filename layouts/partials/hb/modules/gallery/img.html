@@ -1,0 +1,11 @@
+{{- $thumbnail := .Resize "x320" }}
+<img
+  alt="{{ .Name }}"
+  class="hb-gallery-album-img"
+  src="{{ $thumbnail.RelPermalink }}"
+  height="{{ $thumbnail.Height }}"
+  width="{{ $thumbnail.Width }}"
+  loading="lazy"
+  data-src="{{ .RelPermalink }}"
+  data-height="{{ .Height }}"
+  data-width="{{ .Width }}" />

@@ -1,0 +1,17 @@
+{
+  "name": "hb-gallery",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hbstack/gallery.git"
+  },
+  "author": "Razon Yang <razonyang@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hbstack/gallery/issues"
+  },
+  "homepage": "https://github.com/hbstack/gallery",
+  "devDependencies": {
+    "prettier": "^2.8.7",
+    "prettier-plugin-go-template": "^0.0.13"
+  }
+}

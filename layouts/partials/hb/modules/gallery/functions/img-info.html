@@ -1,0 +1,15 @@
+<div class="hb-gallery-img-info">
+  <p class="mb-0">{{ .Title }}</p>
+  {{- with .Exif }}
+    <p class="mb-0">
+      {{- .Date | time.Format ":date_long" -}}
+      {{- .Date | time.Format ":time_short" -}}
+    </p>
+  {{- end }}
+  {{- with .Params.author }}
+    <p class="mb-0">{{ i18n "gallery_img_info_author" . }}</p>
+  {{- end }}
+  {{- with .Params.source }}
+    <p class="mb-0">{{ i18n "gallery_img_info_source"  . }}</p>
+  {{- end }}
+</div>

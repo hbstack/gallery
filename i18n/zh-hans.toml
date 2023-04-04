@@ -1,0 +1,8 @@
+[gallery_img_info_author]
+other = "画师：{{ . }}"
+
+[gallery_img_info_source]
+other = "来源：{{ . }}"
+
+[view_more]
+other = "查看更多"

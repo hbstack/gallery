@@ -1,0 +1,11 @@
+{{- $imgs := slice }}
+{{- range where site.RegularPages "Type" "gallery" }}
+  {{- $page := . }}
+  {{- range .Resources.ByType "image" }}
+    {{- $imgs = $imgs | append (dict
+      "Page" $page
+      "Img" .)
+    }}
+  {{- end }}
+{{- end }}
+{{- return sort $imgs "Img.Name" -}}

@@ -1,0 +1,28 @@
+/*! purgecss start ignore */
+.hb-gallery-album-items {
+    display: flex;
+    gap: $hb-gallery-album-item-gap;
+}
+
+.hb-gallery-album-item {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+
+    @include media-breakpoint-up(md) {
+        height: 200px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        height: 240px;
+    }
+}
+
+.hb-gallery-album-img {
+    height: 100%;
+    width: 100%;
+    border-radius: $hb-gallery-album-item-border-radius;
+    object-fit: cover;
+}
+
+/*! purgecss end ignore */

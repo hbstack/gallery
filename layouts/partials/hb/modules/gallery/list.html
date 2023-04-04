@@ -1,0 +1,30 @@
+{{ partial "hugopress/functions/render-hooks" (dict "Page" . "Name" "hb-gallery-main-begin") }}
+<div class="hb-gallery">
+  <div class="hb-gallery-albums">
+    <div
+      class="hb-gallery-album hb-gallery-album-items d-flex flex-wrap hb-module">
+      {{- range .Paginator.Pages }}
+        {{- $page := . }}
+        {{- $imgs := sort (.Resources.ByType "image") "Name" "desc" }}
+        {{- with index $imgs 0 }}
+          <a
+            class="hb-gallery-album-item flex-grow-1 position-relative"
+            href="{{ $page.RelPermalink }}"
+            title="{{ $page.Title }}">
+            {{ partialCached "hb/modules/gallery/img" . . }}
+            <span
+              class="badge bg-secondary fw-normal position-absolute top-0 end-0 me-1 mt-1">
+              {{- len $imgs -}}
+            </span>
+            <p
+              class="position-absolute h5 bottom-0 mb-1 px-1 text-white text-center w-100 text-truncate">
+              {{- $page.Title -}}
+            </p>
+          </a>
+        {{- end }}
+      {{- end }}
+    </div>
+  </div>
+  {{ template "_internal/pagination.html" . }}
+</div>
+{{ partial "hugopress/functions/render-hooks" (dict "Page" . "Name" "hb-gallery-main-end") }}

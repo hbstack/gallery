@@ -1,0 +1,10 @@
+{{- $icon := dict "vendor" "bs" "name" "info-circle" }}
+<button
+  type="button"
+  class="btn btn-secondary position-absolute top-0 end-0 border-0 bg-transparent"
+  data-bs-toggle="tooltip"
+  data-bs-placement="left"
+  data-bs-html="true"
+  data-bs-title="{{ partial `hb/modules/gallery/functions/img-info` . | safeHTMLAttr }}">
+  {{ partialCached "icons/icon" $icon $icon }}
+</button>
