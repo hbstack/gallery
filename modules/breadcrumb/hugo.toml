@@ -1,0 +1,8 @@
+[params.hugopress.modules.hb-gallery-breadcrumb.hooks.hb-gallery-main-begin]
+weight = 1
+
+[[module.imports]]
+path = "github.com/hbstack/breadcrumb"
+
+[[module.imports]]
+path = "github.com/hbstack/gallery"
