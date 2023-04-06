@@ -6,6 +6,7 @@ github.com/hbstack/breadcrumb v0.1.1/go.mod h1:EnF3Ka4OObgwWhTyZOwB/u/dmeKJKPVbP
 github.com/hbstack/gallery v0.1.0 h1:zcQORuvVHA6EXNwx6ljpvtEhqOTM3kf6aOkSwKaPxrM=
 github.com/hbstack/gallery v0.1.0/go.mod h1:0X+LmjD8d0A4gNUNuDShlOtS7PSvqptjpD8V4TkBUr0=
 github.com/hbstack/gallery v0.2.0/go.mod h1:OWQG13+sSv529zAzpbSwhwaPjWGWRHPiBR29fZKwda4=
+github.com/hbstack/gallery v0.2.2/go.mod h1:Ofic37V8wjqqzaGQaDyx1L/E7TIm7U3Y/meF4GvUhAs=
 github.com/henrygd/bigger-picture v1.1.7 h1:PFGp5Yg5z+pmlDDyHYlx0xTQqhc95tqXOjD4T0THaBE=
 github.com/henrygd/bigger-picture v1.1.7/go.mod h1:LayqbjDNNsZH+ZXklmjBe5T02qxpH9Cah/ygAraOBIk=
 github.com/hugomods/base v0.1.0 h1:3o9Y85BvXHjkYzZfswM/EtthQ8GOYKN8aXHkIWqu3/8=
