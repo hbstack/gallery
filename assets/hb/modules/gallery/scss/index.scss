@@ -23,6 +23,10 @@
     width: 100%;
     border-radius: $hb-gallery-album-item-border-radius;
     object-fit: cover;
+
+    &.loading {
+        filter: blur(1px);
+    }
 }
 
 /*! purgecss end ignore */
