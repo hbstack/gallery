@@ -1,4 +1,4 @@
-{{- $recentImgsCount := 2 }}
+{{- $recentImgsCount := 100 }}
 {{- $imgs := partialCached "hb/modules/gallery/functions/imgs" . }}
 {{ partial "hugopress/functions/render-hooks" (dict "Page" . "Name" "hb-gallery-main-begin") }}
 <div class="hb-gallery">
