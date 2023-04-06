@@ -1,11 +1,16 @@
-{{- $thumbnail := .Resize "x320" }}
+{{- $thumbnail := .Resize "x240" }}
+{{- $color := "" }}
+{{- with $thumbnail.Colors }}
+  {{- $color = index . 0 }}
+{{- end }}
 <img
   alt="{{ .Name }}"
-  class="hb-gallery-album-img"
+  class="hb-gallery-album-img loading"
   src="{{ $thumbnail.RelPermalink }}"
   height="{{ $thumbnail.Height }}"
   width="{{ $thumbnail.Width }}"
   loading="lazy"
+  {{ with $color }}style="background: {{ . }};"{{ end }}
   data-src="{{ .RelPermalink }}"
   data-height="{{ .Height }}"
   data-width="{{ .Width }}" />
