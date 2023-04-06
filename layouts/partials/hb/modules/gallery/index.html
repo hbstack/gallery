@@ -3,7 +3,7 @@
 {{ partial "hugopress/functions/render-hooks" (dict "Page" . "Name" "hb-gallery-main-begin") }}
 <div class="hb-gallery">
   <div
-    class="hb-gallery-album hb-gallery-album-items d-flex flex-wrap hb-module">
+    class="hb-gallery-album hb-gallery-album-items bigger-pictures d-flex flex-wrap hb-module">
     {{- range first $recentImgsCount $imgs }}
       <div class="hb-gallery-album-item flex-grow-1 position-relative">
         {{ partialCached "hb/modules/gallery/img" .Img .Img }}

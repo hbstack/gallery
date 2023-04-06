@@ -11,7 +11,7 @@
           <p class="lead text-center pt-2 mb-0">{{ . }}</p>
         {{- end }}
       </div>
-      <div class="hb-gallery-album-items d-flex flex-wrap">
+      <div class="hb-gallery-album-items bigger-pictures d-flex flex-wrap">
         {{- range $imgs }}
           <div class="hb-gallery-album-item flex-grow-1 position-relative">
             {{- partialCached "hb/modules/gallery/img" . . }}
