@@ -3,7 +3,7 @@
 {{- if ne $img.MediaType.SubType "webp" }}
   {{- $img = .Resize (printf "%dx%d webp" .Width .Height) }}
 {{- end }}
-{{- $thumbnail := $img.Resize "x240" }}
+{{- $thumbnail := $img.Resize (default "x640" site.Params.hb.gallery.thumbnail_size) }}
 {{- $color := "" }}
 {{- with $thumbnail.Colors }}
   {{- $color = index . 0 }}
