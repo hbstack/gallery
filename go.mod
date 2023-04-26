@@ -7,4 +7,6 @@ require (
 	github.com/hbstack/bigger-picture v0.8.0 // indirect
 	github.com/hbstack/bs-tooltip v0.1.1 // indirect
 	github.com/hbstack/hb v0.5.0 // indirect
+	github.com/hugomods/icons v0.6.0 // indirect
+	github.com/twbs/icons v1.10.4 // indirect
 )
