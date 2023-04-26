@@ -2,8 +2,7 @@
   <p class="mb-0">{{ .Title }}</p>
   {{- with .Exif }}
     <p class="mb-0">
-      {{- .Date | time.Format ":date_long" -}}
-      {{- .Date | time.Format ":time_short" -}}
+      {{- printf "%s %s" (.Date | time.Format ":date_long") (.Date | time.Format ":time_short") -}}
     </p>
   {{- end }}
   {{- with .Params.author }}
