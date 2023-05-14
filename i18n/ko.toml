@@ -1,0 +1,8 @@
+[gallery_img_info_author]
+other = "작성자: {{ . }}"
+
+[gallery_img_info_source]
+other = "출처: {{ . }}"
+
+[view_more]
+other = "더 보기"
