@@ -1,0 +1,8 @@
+[gallery_img_info_author]
+other = "Автор: {{ . }}"
+
+[gallery_img_info_source]
+other = "Источник: {{ . }}"
+
+[view_more]
+other = "Посмотреть больше"
