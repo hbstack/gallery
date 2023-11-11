@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.0](https://github.com/hbstack/gallery/compare/v0.7.0...v0.8.0) (2023-11-11)
+
+
+### Features
+
+* **i18n:** create pt-br.toml ([#70](https://github.com/hbstack/gallery/issues/70)) ([28f1a85](https://github.com/hbstack/gallery/commit/28f1a85f3feee9876bb9d61df17decc3358213e6))
+
 ## [0.7.0](https://github.com/hbstack/gallery/compare/v0.6.0...v0.7.0) (2023-11-01)
 
 
