@@ -1,0 +1,4 @@
+{{- $imgs := . }}
+{{- $undatedImgs := sort (where $imgs "Date" nil) "Image.Name" "asc" }}
+{{- $imgs = sort (where $imgs "Date" "ne" nil) "Date" (default "desc" site.Params.hb.gallery.date_sort_order) }}
+{{- return ($imgs | append $undatedImgs) }}

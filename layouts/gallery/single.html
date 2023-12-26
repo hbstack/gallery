@@ -2,7 +2,7 @@
   {{ partial "hugopress/functions/render-hooks" (dict "Page" . "Name" "hb-gallery-main-begin") }}
   <div class="hb-gallery">
     <div class="hb-gallery-album">
-      {{- $imgs := sort (.Resources.ByType "image") "Name" "desc" }}
+      {{- $imgs := partial "hb/modules/gallery/functions/sorted-page-imgs" . }}
       <div class="hb-gallery-album-intro mb-5">
         <h1 class="text-center">
           {{- .Title -}}
@@ -14,8 +14,8 @@
       <div class="hb-gallery-album-items bigger-pictures d-flex flex-wrap">
         {{- range $imgs }}
           <div class="hb-gallery-album-item flex-grow-1 position-relative">
-            {{- partialCached "hb/modules/gallery/img" . . }}
-            {{- partialCached "hb/modules/gallery/info" . . }}
+            {{- partialCached "hb/modules/gallery/img" .Image .Image }}
+            {{- partialCached "hb/modules/gallery/info" .Image .Image }}
           </div>
         {{- end }}
       </div>
