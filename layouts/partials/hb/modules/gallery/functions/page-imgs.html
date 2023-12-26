@@ -1,0 +1,20 @@
+{{- $page := . }}
+{{- $imgs := slice }}
+{{- $resources := .Resources.ByType "image" }}
+{{- range $resources }}
+  {{- $img := . }}
+  {{- $date := "" }}
+  {{- with $img.Exif }}
+    {{- $date = .Date }}
+  {{- else }}
+    {{- with $img.Params.date }}
+      {{- $date = time.AsTime . }}
+    {{- end }}
+  {{- end }}
+  {{- with $date }}
+    {{- $imgs = $imgs | append (dict "Image" $img "Page" $page "Date" $date) }}
+  {{- else }}
+    {{- $imgs = $imgs | append (dict "Image" $img "Page" $page) }}
+  {{- end }}
+{{- end }}
+{{- return $imgs }}
