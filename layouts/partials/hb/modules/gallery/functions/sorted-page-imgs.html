@@ -1,2 +1,2 @@
 {{- $imgs := partialCached "hb/modules/gallery/functions/page-imgs" . . }}
-{{- return (partial "hb/modules/gallery/functions/sort-imgs" $imgs) }}
+{{- return (partial "hb/modules/gallery/functions/sort-imgs" (dict "context" . "images" $imgs)) }}

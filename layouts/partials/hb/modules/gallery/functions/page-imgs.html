@@ -1,6 +1,12 @@
 {{- $page := . }}
 {{- $imgs := slice }}
 {{- $resources := .Resources.ByType "image" }}
+{{- if not .BundleType }}
+  {{- $parents := .Parent.Resources.ByType "image" }}
+  {{- range .Params.Resources }}
+    {{- $resources = $resources | append (where $parents "Name" .src) }}
+  {{- end }}
+{{- end }}
 {{- range $resources }}
   {{- $img := . }}
   {{- $date := "" }}

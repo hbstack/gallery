@@ -1,4 +1,8 @@
-{{- $imgs := . }}
-{{- $undatedImgs := sort (where $imgs "Date" nil) "Image.Name" "asc" }}
-{{- $imgs = sort (where $imgs "Date" "ne" nil) "Date" (default "desc" site.Params.hb.gallery.date_sort_order) }}
+{{- $context := .context }}
+{{- $imgs := .images }}
+{{- $undatedImgs := slice }}
+{{- if .PageBundleType }}
+    {{- $undatedImgs = sort (where $imgs "Date" nil) "Image.Name" (default "desc" site.Params.hb.gallery.undated_sort_order) }}
+    {{- $imgs = sort (where $imgs "Date" "ne" nil) "Date" (default "desc" site.Params.hb.gallery.date_sort_order) }}
+{{- end }}
 {{- return ($imgs | append $undatedImgs) }}
