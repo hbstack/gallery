@@ -1,5 +1,6 @@
 {{ partial "hugopress/functions/render-hooks" (dict "Page" . "Name" "hb-gallery-main-begin") }}
 <div class="hb-gallery">
+  {{ partialCached "hb/modules/gallery/post-content" . . }}
   <div class="hb-gallery-albums">
     <div
       class="hb-gallery-album hb-gallery-album-items d-flex flex-wrap hb-module">
