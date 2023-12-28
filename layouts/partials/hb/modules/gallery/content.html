@@ -1,0 +1,11 @@
+{{- if .Content }}
+    {{- partial "hugopress/functions/render-hooks" (dict "Name" "hb-gallery-content-begin" "Page" .) }}
+    {{- $attributes := partial "hugopress/functions/render-attributes" (dict "Page" . "Name" "hb-gallery-content-begin") }}
+    <div class="hb-gallery-content hb-module"
+        {{ with $attributes }}{{ . | safeHTMLAttr }}{{ end }}>
+        {{- partial "hugopress/functions/render-hooks" (dict "Name" "hb-gallery-content-afterbegin" "Page" .) }}
+        {{ .Content }}
+        {{- partial "hugopress/functions/render-hooks" (dict "Name" "hb-gallery-content-beforeend" "Page" .) }}
+    </div>
+    {{- partial "hugopress/functions/render-hooks" (dict "Name" "hb-gallery-content-end" "Page" .) }}
+{{- end }}
