@@ -2,7 +2,7 @@
 {{- $imgs := partialCached "hb/modules/gallery/functions/imgs" . }}
 {{- $imgs = partial "hb/modules/gallery/functions/sort-imgs" $imgs }}
 {{ partial "hugopress/functions/render-hooks" (dict "Page" . "Name" "hb-gallery-main-begin") }}
-<div class="hb-gallery">
+<div class="hb-gallery hb-gallery-home">
   <div
     class="hb-gallery-album hb-gallery-album-items bigger-pictures d-flex flex-wrap hb-module">
     {{- range first $recentImgsCount $imgs }}
@@ -11,7 +11,7 @@
         {{ partialCached "hb/modules/gallery/info" .Image .Image }}
         <a
           href="{{ .Page.RelPermalink }}"
-          class="text-decoration-none h5 position-absolute bottom-0 mb-1 px-1 text-white text-center w-100 text-truncate">
+          class="text-decoration-none position-absolute bottom-0 mb-0 px-1 text-white text-center w-100 text-truncate">
           {{- .Page.Title -}}
         </a>
       </div>
