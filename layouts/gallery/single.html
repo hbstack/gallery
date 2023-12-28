@@ -10,6 +10,7 @@
         {{- with .Description }}
           <p class="lead text-center pt-2 mb-0">{{ . }}</p>
         {{- end }}
+        {{ partial "hb/modules/gallery/content" . }}
       </div>
       <div class="hb-gallery-album-items bigger-pictures d-flex flex-wrap">
         {{- range $imgs }}
