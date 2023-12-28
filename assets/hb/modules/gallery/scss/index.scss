@@ -33,6 +33,7 @@
 .hb-gallery-album-figure-caption {
     background: #000;
     opacity: .75;
+    border-radius: 0 0 $hb-gallery-album-item-border-radius $hb-gallery-album-item-border-radius;
 }
 
 .hb-gallery-home,
