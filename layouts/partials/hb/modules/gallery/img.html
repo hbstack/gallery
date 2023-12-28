@@ -8,14 +8,22 @@
 {{- with $thumbnail.Colors }}
   {{- $color = index . 0 }}
 {{- end }}
-<img
-  alt="{{ $img.Name }}"
-  class="hb-gallery-album-img loading"
-  src="{{ $thumbnail.RelPermalink }}"
-  height="{{ $thumbnail.Height }}"
-  width="{{ $thumbnail.Width }}"
-  loading="lazy"
-  {{ with $color }}style="background: {{ . }};"{{ end }}
-  data-src="{{ $img.RelPermalink }}"
-  data-height="{{ $img.Height }}"
-  data-width="{{ $img.Width }}" />
+{{- $alt := default $img.Name $img.Title }}
+{{- $caption := default $alt $img.Params.caption }}
+<figure class="hb-gallery-album-figure position-relative h-100 w-100">
+  <img
+    alt="{{ $alt }}"
+    class="hb-gallery-album-img loading"
+    src="{{ $thumbnail.RelPermalink }}"
+    height="{{ $thumbnail.Height }}"
+    width="{{ $thumbnail.Width }}"
+    loading="lazy"
+    {{ with $color }}style="background: {{ . }};"{{ end }}
+    data-src="{{ $img.RelPermalink }}"
+    data-height="{{ $img.Height }}"
+    data-width="{{ $img.Width }}" />
+  <figcaption
+    class="hb-gallery-album-figure-caption w-100 bottom-0 start-0 position-absolute text-center text-white">
+    {{- $caption -}}
+  </figcaption>
+</figure>
