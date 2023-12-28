@@ -6,7 +6,8 @@
   {{- $date := "" }}
   {{- with $img.Exif }}
     {{- $date = .Date }}
-  {{- else }}
+  {{- end }}
+  {{- if not $date }}
     {{- with $img.Params.date }}
       {{- $date = time.AsTime . }}
     {{- end }}

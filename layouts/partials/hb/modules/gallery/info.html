@@ -1,10 +1,45 @@
-{{- $icon := dict "vendor" "bs" "name" "info-circle" }}
-<button
-  type="button"
-  class="btn btn-secondary position-absolute top-0 end-0 border-0 bg-transparent"
-  data-bs-toggle="tooltip"
-  data-bs-placement="left"
-  data-bs-html="true"
-  data-bs-title="{{ partial `hb/modules/gallery/functions/img-info` . | safeHTMLAttr }}">
-  {{ partialCached "icons/icon" $icon $icon }}
-</button>
+<div class="hb-gallery-img-info position-absolute top-0 end-0 me-2">
+  {{- $date := "" }}
+  {{- with .Exif }}
+    {{- $date = .Date }}
+  {{- end }}
+  {{- if not $date }}
+    {{- with .Params.date }}
+      {{- $date = time.AsTime . }}
+    {{- end }}
+  {{- end }}
+  {{- with $date }}
+    {{- $formatedDate := printf "%s %s" ($date | time.Format ":date_long") ($date | time.Format ":time_short") -}}
+    <button
+      type="button"
+      class="btn btn-secondary border-0 bg-transparent px-1"
+      data-bs-toggle="tooltip"
+      data-bs-placement="left"
+      data-bs-html="true"
+      data-bs-title="{{ $formatedDate }}">
+      {{ partial "icons/icon" (dict "vendor" "bs" "name" "clock") }}
+    </button>
+  {{- end }}
+  {{- with .Params.author }}
+    <button
+      type="button"
+      class="btn btn-secondary border-0 bg-transparent px-1"
+      data-bs-toggle="tooltip"
+      data-bs-placement="left"
+      data-bs-html="true"
+      data-bs-title="{{ i18n `gallery_img_info_author` . }}">
+      {{ partial "icons/icon" (dict "vendor" "bs" "name" "brush") }}
+    </button>
+  {{- end }}
+  {{- with .Params.source }}
+    <button
+      type="button"
+      class="btn btn-secondary border-0 bg-transparent px-1"
+      data-bs-toggle="tooltip"
+      data-bs-placement="left"
+      data-bs-html="true"
+      data-bs-title="{{ i18n `gallery_img_info_source` . }}">
+      {{ partial "icons/icon" (dict "vendor" "bs" "name" "c-circle") }}
+    </button>
+  {{- end }}
+</div>
