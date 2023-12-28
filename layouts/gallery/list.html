@@ -1,5 +1,5 @@
 {{- define "title" }}
-  {{- $pages := .RegularPagesRecursive }}
+  {{- $pages := .Pages }}
   {{- $paginator := .Paginate $pages .Site.Params.hb.gallery.paginate }}
   {{ partial "base/title" . }}
 {{- end -}}
