@@ -6,7 +6,14 @@
       class="hb-gallery-album hb-gallery-album-items d-flex flex-wrap hb-module">
       {{- range .Paginator.Pages }}
         {{- $page := . }}
-        {{- $imgs := partial "hb/modules/gallery/functions/sorted-page-imgs" . }}
+        {{- $imgs := slice }}
+        {{- if $page.IsSection }}
+          {{- range $page.RegularPages }}
+            {{- $imgs = $imgs | append (partial "hb/modules/gallery/functions/sorted-page-imgs" .) }}
+          {{- end }}
+        {{- else }}
+          {{- $imgs = partial "hb/modules/gallery/functions/sorted-page-imgs" . }}
+        {{- end }}
         {{- with index $imgs 0 }}
           <a
             class="hb-gallery-album-item flex-grow-1 position-relative"
