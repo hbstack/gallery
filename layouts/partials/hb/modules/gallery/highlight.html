@@ -1,6 +1,6 @@
 {{- if .IsSection }}
   {{- $imgs := slice }}
-  {{- range .RegularPages }}
+  {{- range .RegularPagesRecursive }}
     {{- $imgs = $imgs | append (partialCached "hb/modules/gallery/functions/page-imgs" . .) }}
   {{- end }}
   {{- $imgs = where $imgs ".Image.Params.highlight" true }}
