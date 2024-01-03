@@ -6,14 +6,18 @@
   {{- end }}
   {{- $imgs = where $imgs ".Image.Params.highlight" true }}
   {{- $imgs = partial "hb/modules/gallery/functions/sort-imgs" $imgs }}
-  {{- range first (default 10 site.Params.hb.gallery.highlight_images_count) $imgs }}
-    <div class="hb-gallery-album-item hb-gallery-album-item-highlight flex-grow-1 position-relative">
-      {{- partialCached "hb/modules/gallery/img" .Image .Image }}
-      {{- partialCached "hb/modules/gallery/info" .Image .Image }}
-      <p
-        class="hb-gallery-title position-absolute bottom-0 mb-0 px-1 text-white text-center w-100 text-truncate">
-        {{- default .Image.Name .Image.Title -}}
-      </p>
+  {{- if $imgs }}
+    <div class="hb-gallery-album hb-gallery-album-items bigger-pictures d-flex flex-wrap hb-module">
+      {{- range first (default 10 site.Params.hb.gallery.highlight_images_count) $imgs }}
+        <div class="hb-gallery-album-item hb-gallery-album-item-highlight flex-grow-1 position-relative">
+          {{- partialCached "hb/modules/gallery/img" .Image .Image }}
+          {{- partialCached "hb/modules/gallery/info" .Image .Image }}
+          <p
+            class="hb-gallery-title position-absolute bottom-0 mb-0 px-1 text-white text-center w-100 text-truncate">
+            {{- default .Image.Name .Image.Title -}}
+          </p>
+        </div>
+      {{- end }}
     </div>
   {{- end }}
 {{- end }}
