@@ -18,3 +18,4 @@ paginate = 24
 # - x[height]: resize to a height of [height]px and preserve aspect ratio, such as x640.
 thumbnail_size = "x640"
 date_sort_order = "desc"
+highlight_images_count = 10
