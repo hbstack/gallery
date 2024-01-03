@@ -5,7 +5,6 @@
     <div
       class="hb-gallery-album hb-gallery-album-items d-flex flex-wrap hb-module">
       {{- $highlights := partial "hb/modules/gallery/functions/sorted-page-imgs" . }}
-      {{- warnf "page: %v highlights: %v" . $highlights }}
       {{- range $highlights }}
         <div class="hb-gallery-album-item flex-grow-1 position-relative">
           {{- partialCached "hb/modules/gallery/img" .Image .Image }}
