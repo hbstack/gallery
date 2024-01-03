@@ -1,6 +1,11 @@
+{{- $arguments := dict }}
 {{- $page := . }}
+{{- if (reflect.IsMap .) }}
+  {{- $arguments = .arguments }}
+  {{- $page = .context }}
+{{- end }}
 {{- $imgs := slice }}
-{{- $resources := .Resources.ByType "image" }}
+{{- $resources := $page.Resources.ByType "image" }}
 {{- range $resources }}
   {{- $img := . }}
   {{- $date := "" }}
@@ -12,10 +17,20 @@
       {{- $date = time.AsTime . }}
     {{- end }}
   {{- end }}
-  {{- with $date }}
-    {{- $imgs = $imgs | append (dict "Image" $img "Page" $page "Date" $date) }}
-  {{- else }}
-    {{- $imgs = $imgs | append (dict "Image" $img "Page" $page) }}
+  {{- if (or $img.Params.highlight (not $arguments.highlights_only)) }}
+      {{- with $date }}
+        {{- $imgs = $imgs | append (dict "Image" $img "Page" $page "Date" $date) }}
+      {{- else }}
+        {{- $imgs = $imgs | append (dict "Image" $img "Page" $page) }}
+      {{- end }}
   {{- end }}
 {{- end }}
+{{- $highlight_imgs := slice }}
+{{- if $page.IsSection }}
+    {{- range $page.RegularPages.ByTitle -}}
+        {{- $highlights := (partial "hb/modules/gallery/functions/page-imgs.html" (dict "context" . "arguments" (dict "highlights_only" true))) }}
+        {{- $highlight_imgs = $highlight_imgs | append $highlights }}
+    {{- end }}
+{{- end }}
+{{- $imgs = $highlight_imgs | append $imgs }}
 {{- return $imgs }}
