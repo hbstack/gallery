@@ -1,5 +1,24 @@
 # Changelog
 
+## [0.11.0](https://github.com/hbstack/gallery/compare/v0.10.0...v0.11.0) (2024-01-03)
+
+
+### Features ✨
+
+* add the hb.gallery.highlight_images_recursive parameter, default to false, when true, list highlight images recursive ([d2b8a01](https://github.com/hbstack/gallery/commit/d2b8a01ca27abddc4620ae417e4f18041043b57c))
+* allow highlighting the images and display them in parent section ([#97](https://github.com/hbstack/gallery/issues/97)) ([0affe8c](https://github.com/hbstack/gallery/commit/0affe8c73d895f30107f26ab841b9e81f744c4dd))
+
+
+### Bug Fixes 🐞
+
+* list highlight images recursive ([1a7d1f2](https://github.com/hbstack/gallery/commit/1a7d1f2c3faa4ece20ede152399f94510dc18909))
+
+
+### Styles 🎨
+
+* bigger pictures for highlights album ([#101](https://github.com/hbstack/gallery/issues/101)) ([3d0ae04](https://github.com/hbstack/gallery/commit/3d0ae04027720afa12741faaa7e7366faae583ea))
+* use first of social images as cover if present ([#102](https://github.com/hbstack/gallery/issues/102)) ([9720684](https://github.com/hbstack/gallery/commit/9720684c432086a287ce08c06a56c576146e3b9e))
+
 ## [0.10.0](https://github.com/hbstack/gallery/compare/v0.9.0...v0.10.0) (2023-12-30)
 
 
