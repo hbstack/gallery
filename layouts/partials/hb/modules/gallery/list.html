@@ -15,12 +15,17 @@
         {{- else }}
           {{- $imgs = partial "hb/modules/gallery/functions/sorted-page-imgs" . }}
         {{- end }}
+        {{- $featuredImgs := partial "_funcs/get-page-images" $page }}
         {{- with index $imgs 0 }}
           <a
             class="hb-gallery-album-item flex-grow-1 position-relative"
             href="{{ $page.RelPermalink }}"
             title="{{ $page.Title }}">
-            {{ partialCached "hb/modules/gallery/img" .Image .Image }}
+            {{- $img := .Image }}
+            {{- with index $featuredImgs 0 }}
+              {{- $img = default $img .Image }}
+            {{- end }}
+            {{ partialCached "hb/modules/gallery/img" $img $img }}
             <span
               class="badge bg-secondary fw-normal position-absolute top-0 end-0 me-1 mt-1">
               {{- len $imgs -}}
