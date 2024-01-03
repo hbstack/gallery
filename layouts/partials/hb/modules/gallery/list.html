@@ -2,9 +2,10 @@
 <div class="hb-gallery">
   {{ partial "hb/modules/gallery/content" . }}
   <div class="hb-gallery-albums">
+    {{- partial "hb/modules/gallery/highlight" . }}
+    <h2 class="display-5 text-center mb-5">Albums</h2>
     <div
       class="hb-gallery-album hb-gallery-album-items d-flex flex-wrap hb-module">
-      {{- partial "hb/modules/gallery/highlight" . }}
       {{- range .Paginator.Pages }}
         {{- $page := . }}
         {{- $imgs := slice }}
