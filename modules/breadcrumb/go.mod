@@ -7,6 +7,6 @@ require (
 	github.com/hbstack/breadcrumb v0.6.0 // indirect
 	github.com/hbstack/gallery v0.11.0 // indirect
 	github.com/henrygd/bigger-picture v1.1.15 // indirect
-	github.com/hugomods/base v0.4.2 // indirect
+	github.com/hugomods/base v0.5.0 // indirect
 	github.com/hugomods/hugopress v0.2.3 // indirect
 )
