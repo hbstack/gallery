@@ -27,6 +27,7 @@ github.com/hbstack/gallery v0.8.0/go.mod h1:smQqq5RLigiWC5fpTDpErqN9RPVdDBtrNMlo
 github.com/hbstack/gallery v0.9.0/go.mod h1:jiZ6Uu/TNErulCwMWR5jdZzzbQsdRtm/2PbbhacRAJQ=
 github.com/hbstack/gallery v0.10.0/go.mod h1:ni5LadxEx6YVdu+/67+VQZ0FEgSAj5Zqd+tfXLd1RFY=
 github.com/hbstack/gallery v0.11.0/go.mod h1:ni5LadxEx6YVdu+/67+VQZ0FEgSAj5Zqd+tfXLd1RFY=
+github.com/hbstack/gallery v0.12.0/go.mod h1:FeLNZqjpKCj1ryfPoTJVk59Bph2N1BfDcNBHyudWT4o=
 github.com/henrygd/bigger-picture v1.1.7 h1:PFGp5Yg5z+pmlDDyHYlx0xTQqhc95tqXOjD4T0THaBE=
 github.com/henrygd/bigger-picture v1.1.7/go.mod h1:LayqbjDNNsZH+ZXklmjBe5T02qxpH9Cah/ygAraOBIk=
 github.com/henrygd/bigger-picture v1.1.8/go.mod h1:LayqbjDNNsZH+ZXklmjBe5T02qxpH9Cah/ygAraOBIk=
