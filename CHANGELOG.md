@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.12.0](https://github.com/hbstack/gallery/compare/v0.11.0...v0.12.0) (2024-04-23)
+
+
+### Features ✨
+
+* **i18n:** add German translations ([#125](https://github.com/hbstack/gallery/issues/125)) ([d50f5ca](https://github.com/hbstack/gallery/commit/d50f5ca15b967b0453e3cbdf3343051edd835415))
+
 ## [0.11.0](https://github.com/hbstack/gallery/compare/v0.10.0...v0.11.0) (2024-01-03)
 
 
