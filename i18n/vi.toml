@@ -1,0 +1,8 @@
+[gallery_img_info_author]
+other = "Author: {{ . }}"
+
+[gallery_img_info_source]
+other = "Source: {{ . }}"
+
+[view_more]
+other = "View more"
