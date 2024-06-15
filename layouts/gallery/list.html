@@ -1,6 +1,7 @@
 {{- define "title" }}
   {{- $pages := .Pages }}
   {{- $paginator := .Paginate $pages .Site.Params.hb.gallery.paginate }}
+  {{- .Store.Set "paginated" true }}
   {{ partial "base/title" . }}
 {{- end -}}
 
