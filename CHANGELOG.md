@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.13.1](https://github.com/hbstack/gallery/compare/v0.13.0...v0.13.1) (2024-06-15)
+
+
+### Bug Fixes 🐞
+
+* pagination title ([#140](https://github.com/hbstack/gallery/issues/140)) ([df0b958](https://github.com/hbstack/gallery/commit/df0b958cc2bcff2195b2e7852035aa7ab49b1b42))
+
 ## [0.13.0](https://github.com/hbstack/gallery/compare/v0.12.0...v0.13.0) (2024-05-28)
 
 
