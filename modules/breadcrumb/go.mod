@@ -4,7 +4,7 @@ go 1.20
 
 require (
 	github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20200 // indirect
-	github.com/hbstack/breadcrumb v0.7.3 // indirect
+	github.com/hbstack/breadcrumb v0.7.4 // indirect
 	github.com/hbstack/gallery v0.13.1 // indirect
 	github.com/henrygd/bigger-picture v1.1.17 // indirect
 	github.com/hugomods/base v0.7.2 // indirect
