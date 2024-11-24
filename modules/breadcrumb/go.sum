@@ -18,6 +18,7 @@ github.com/hbstack/breadcrumb v0.7.1/go.mod h1:iLp0/AKYRVTNo+Sae1V55hX7CfhX9i0F/
 github.com/hbstack/breadcrumb v0.7.2/go.mod h1:iLp0/AKYRVTNo+Sae1V55hX7CfhX9i0F/nMZ0SnicLQ=
 github.com/hbstack/breadcrumb v0.7.3/go.mod h1:Xh93KE3dzXP7fYKcV7mjiMgw7P4JUOFfFgsx28jTo5o=
 github.com/hbstack/breadcrumb v0.7.4/go.mod h1:PuwTpChVZHvvcEEEf7XmSNr4vwKEgVJxxSLKUuD5TUc=
+github.com/hbstack/breadcrumb v0.8.0/go.mod h1:VU6j9DqY+2mkRuzJVu6vYvL9/psUSxxKg28/Us7c21Y=
 github.com/hbstack/gallery v0.1.0 h1:zcQORuvVHA6EXNwx6ljpvtEhqOTM3kf6aOkSwKaPxrM=
 github.com/hbstack/gallery v0.1.0/go.mod h1:0X+LmjD8d0A4gNUNuDShlOtS7PSvqptjpD8V4TkBUr0=
 github.com/hbstack/gallery v0.2.0/go.mod h1:OWQG13+sSv529zAzpbSwhwaPjWGWRHPiBR29fZKwda4=
